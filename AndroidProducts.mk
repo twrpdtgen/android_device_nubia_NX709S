@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_NX709S.mk
+    $(LOCAL_DIR)/twrp_NX709S.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_NX709S-user \
-    omni_NX709S-userdebug \
-    omni_NX709S-eng
+    twrp_NX709S-user \
+    twrp_NX709S-userdebug \
+    twrp_NX709S-eng
