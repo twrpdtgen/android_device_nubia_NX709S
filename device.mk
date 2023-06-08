@@ -21,11 +21,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bootctrl.taro
 
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.taro \
-    libgptutils \
-    libz \
-    libcutils
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti.recovery
+    PRODUCT_PACKAGES_DEBUG += \
+        bootctl
+
+ # Dynamic partitions
+    PRODUCT_USE_DYNAMIC_PARTITIONS := true
+    PRODUCT_BUILD_SUPER_PARTITION := false
+        
+# Fastbootd
+    PRODUCT_PACKAGES += \
+        android.hardware.fastboot@1.0-impl-mock \
+        fastbootd
+
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
